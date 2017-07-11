@@ -19,22 +19,11 @@
 
 import PackageDescription
 
-#if os(OSX)
 let package = Package(
     name: "PostgreSQL",
     targets: [],
     dependencies: [
-        .Package(url: "https://github.com/PerfectlySoft/Perfect-libpq.git", majorVersion: 2, minor: 0)
+        .Package(url: "https://github.com/RobotsAndPencils/Perfect-libpq.git", majorVersion: 3, minor: 0)
     ],
     exclude: []
 )
-#else
-let package = Package(
-    name: "PostgreSQL",
-    targets: [],
-    dependencies: [
-        .Package(url: "https://github.com/PerfectlySoft/Perfect-libpq-linux.git", majorVersion: 2, minor: 0)
-    ],
-    exclude: []
-)
-#endif
